@@ -1,0 +1,29 @@
+ - Site para Comida -
+
+Paleta de cores:
+- cor-1 = #FFF3DD
+- cor-2 = #B66541
+- cor-3 = #DF4D01
+- cor-4 = #2D231E
+
+
+Nome da empresa 
+- Burger Bliss
+- Chef Maximus
+
+Slogan
+-O melhor hambúrguer do pedaço.
+
+Cardapio
+
+The Tower of Babel Burger - Um hambúrguer com várias camadas de carne, queijo e coberturas, empilhadas tão alto quanto a lendária torre.
+
+The Atomic Burger - Um hambúrguer picante que fará seu paladar explodir como uma bomba atômica.
+
+The Black Hole Burger - Um hambúrguer tão escuro e misterioso quanto um buraco negro, com uma mistura secreta de especiarias e molhos.
+
+The Unicorn Burger - Um hambúrguer mágico e colorido, coberto com ingredientes únicos e extravagantes.
+
+The Zombie Burger - Um hambúrguer assustadoramente delicioso, servido em um pão preto com olhos de queijo e uma boca de ketchup.
+
+The Godlike Burger - O hambúrguer mais delicioso e supremo do universo, feito com os melhores ingredientes e preparado com maestria divina.
