@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Burguer Bliss</title>
     <link rel="shortcut icon" href="./img/logo1.png" type="./img/icon-web.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="swiper-bundle.min.css">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./style.css">
 
 
 
@@ -106,53 +108,66 @@
 
         </section>
 
-        <section id="cardapio">
+        <section id="cardapio" class="swiper mySwiper">
+            <h1 class="title-cardapio">Cardápio</h1>
+            <p class="para-cardapio">Explore nosso cardápio e prepare-se para uma experiência culinária inesquecível. Estamos ansiosos para atendê-lo e tornar sua refeição um momento especial.</p>
             <div class="cardapio-container swiper-wrapper">
 
 
                 <div class="slide swiper-slide">
                     <img src="./img/torre.jpg" alt="" class="burguer1">
-                    <p class="desc-burguer">The Tower of Babel Burger - Um hambúrguer com várias camadas de carne,
+                    <h2 class="tt-img">The Tower of Babel Burger </h2>
+                    <p class="desc-burguer">Um hambúrguer com várias camadas de carne,
                         queijo e coberturas, empilhadas tão alto quanto a lendária torre.</p>
                 </div>
 
                 <div class="slide swiper-slide">
                     <img src="./img/prato-1.jpg" alt="burguer1" class="burguer2">
-                    <p class="desc-burguer">The Atomic Burger - Um hambúrguer picante que fará seu paladar explodir como
+                    <h2 class="tt-img">The Atomic Burger</h2>
+                    <p class="desc-burguer">Um hambúrguer picante que fará seu paladar explodir como
                         uma bomba atômica.</p>
                 </div>
 
                 <div class="slide swiper-slide">
                     <img src="./img/prato-2.jpg" alt="" class="burguer3">
-                    <p class="desc-burguer">The Black Hole Burger - Um hambúrguer tão escuro e misterioso quanto um
+                    <h2 class="tt-img">The Black Hole Burger</h2>
+                    <p class="desc-burguer">Um hambúrguer tão escuro e misterioso quanto um
                         buraco negro, com uma mistura secreta de especiarias e molhos.</p>
                 </div>
 
                 <div class="slide swiper-slide">
                     <img src="./img/uni.jpg" alt="" class="burguer4">
-                    <p class="desc-burguer">The Unicorn Burger - Um hambúrguer mágico e colorido, coberto com
+                    <h2 class="tt-img">The Unicorn Burger</h2>
+                    <p class="desc-burguer">Um hambúrguer mágico e colorido, coberto com
                         ingredientes únicos e extravagantes.</p>
                 </div>
 
                 <div class="slide swiper-slide">
                     <img src="./img/zumbi.jpg" alt="" class="burguer5">
-                    <p class="desc-burguer">The Zombie Burger - Um hambúrguer assustadoramente delicioso, servido em um
+                    <h2 class="tt-img">The Zombie Burger</h2>
+                    <p class="desc-burguer">Um hambúrguer assustadoramente delicioso, servido em um
                         pão preto com olhos de queijo e uma boca de ketchup.</p>
                 </div>
 
                 <div class="slide swiper-slide">
                     <img src="./img/prato-3.jpg" alt="" class="burguer6">
-                    <p class="desc-burguer">The Godlike Burger - O hambúrguer mais delicioso e supremo do universo,
+                    <h2 class="tt-img">The Godlike Burger</h2>
+                    <p class="desc-burguer">O hambúrguer mais delicioso e supremo do universo,
                         feito com os melhores ingredientes e preparado com maestria divina.</p>
                 </div>
 
             </div>
+
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-pagination"></div>
+
         </section>
+        
     </main>
 
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
