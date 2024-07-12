@@ -77,7 +77,7 @@ nav {
         box-sizing: border-box;
         width: 40%;
         min-width: 200px;
-        height: 100dvh;
+        height: 100%;
         color: var(--cor1);
         background: var(--cor4);
         padding: 30px;
