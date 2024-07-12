@@ -66,85 +66,87 @@ nav {
 
     border-top: transparent;
     border-left: transparent;
-    border-right:transparent ;
+    border-right: transparent;
     border-bottom-width: 1px;
 
     padding: 20px;
 }
+
 /* TOGGLE MENU ****/
-    .menu {
-        display: none;
-        box-sizing: border-box;
-        width: 40%;
-        min-width: 200px;
-        height: 100%;
-        color: var(--cor1);
-        background: var(--cor4);
-        padding: 30px;
-        position: fixed;
-        top: 0;
-        left: -40%;
-        transition: all .5s;
+.menu {
+    display: none;
+    box-sizing: border-box;
+    width: 40%;
+    min-width: 200px;
+    height: 100%;
+    color: var(--cor1);
+    background: var(--cor4);
+    padding: 30px;
+    position: fixed;
+    top: 0;
+    left: -40%;
+    transition: all .5s;
+}
+
+.menu ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.ancora {
+    display: block;
+
+    padding: 10px;
+    text-decoration: none;
+
+    font-weight: 300;
+
+    color: var(--cor1);
+
+    transition: .5s;
+    text-transform: uppercase;
+}
+
+.ancora:hover {
+
+    font-weight: 600;
+    font-size: 16px;
+
+    text-shadow: 0px 0px 2px var(--cor1);
+
+}
+
+.menu label {
+    position: absolute;
+    right: -20px;
+    top: 20px;
+    cursor: pointer;
+    transition: all .5s;
+    background-image: url('./img/tres-pontinhos.png');
+    color: transparent;
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+
+
+}
+
+#toggle-menu {
+    display: none;
+}
+
+#toggle-menu:checked~.menu {
+    label {
+        right: 30px;
+
     }
+}
 
-    .menu ul {
-        padding: 0;
-        margin: 0;
-        list-style: none;
-    }
+#toggle-menu:checked~.menu {
+    left: 0;
+}
 
-    .ancora {
-        display: block;
-
-        padding: 10px;
-        text-decoration: none;
-
-        font-weight: 300;
-
-        color: var(--cor1);
-
-        transition: .5s;
-        text-transform: uppercase;
-    }
-
-    .ancora:hover {
-
-        font-weight: 600;
-        font-size: 16px;
-
-        text-shadow: 0px 0px 2px var(--cor1);
-
-    }
-
-    .menu label {
-        position: absolute;
-        right: -20px;
-        top: 20px;
-        cursor: pointer;
-        transition: all .5s;
-        background-image: url('./img/tres-pontinhos.png');
-        color: transparent;
-        background-size: cover;
-        background-position: center right;
-        background-repeat: no-repeat;
-
-
-    }
-
-    #toggle-menu {
-        display: none;
-    }
-
-    #toggle-menu:checked~.menu {
-        label {
-            right: 30px;
-
-        }
-    }
-
-    #toggle-menu:checked~.menu {
-        left: 0;
-    }
 /**************************************************/
 .logo {
     margin-left: 400px;
@@ -541,7 +543,7 @@ nav {
     color: var(--cor1);
     font-weight: 500;
     font-size: 150px;
-    margin: 140px 140px 10px;
+
 
     font-family: 'myfont', sans-serif;
 }
@@ -627,46 +629,29 @@ nav {
     font-size: 30px;
 }
 
-.desc-burguer-2 {
-    color: var(--cor1);
-
-
+.desc-burguer-2{
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.623);
+    padding: 16px;
     text-align: center;
-
-    font-weight: 600;
-    font-size: 15px;
-    margin-top: 20px;
-
-    align-items: center;
-    justify-content: center;
-
-
-    background: transparent;
-
-    text-decoration: none;
-    font-family: 'reboto', sans-serif;
-    padding: 10px;
-
-    margin-left: 890px;
-    color: var(--cor1);
-    border-radius: 80px;
-
-
-
-
-    box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.616);
-
-    transition: .8s;
+    margin: 20px;
+    font-weight: 500;
+    box-shadow: 0px 0px 8px 2px rgba(255, 255, 255, 0.349);
+    border-radius: 20px;
+    transition: .6s;
+}
+.desc-burguer-2:hover{
+    background: white;
+    cursor: pointer;
+    color: var(--cor4);
+    
+    box-shadow: 0px 0px 16px 4px rgba(255, 255, 255, 0.349);
+    font-weight: 800;
+    font-size: 18px;
+    
 }
 
-.desc-burguer-2:hover {
 
-    background: var(--cor1);
-    color: #452A12;
-
-    margin-top: 20px;
-    box-shadow: 0px 0px 20px 8px rgba(255, 205, 186, 0.685);
-}
 
 /****************************************/
 
@@ -985,183 +970,577 @@ nav {
     }
 
     /**** CONTEUDO 1 *****/
-        .text-cont-1 {
-            margin: 30px;
-            padding: 20px;
-            
-        }
+    .conteudo-1 {
+        align-items: start;
+        justify-content: space-between;
 
-        .titulo-1 {
-            font-size: 80px;
-        }
+    }
 
-        .titulo-1-2 {
-            margin-top: -60px;
-        }
+    .text-cont-1 {
+        margin: 0;
+        padding: 20px;
 
-        .para-2 {
-            margin-top: -30px;
-            width: 350px;
-        }
+    }
 
-        .foto-1 {
-            width: 800px;
-            height: 700px;
+    .titulo-1 {
+        font-size: 80px;
+    }
 
-            margin-left: 20px;
-            position: absolute;
-            top: 50%;
-            left: 10%;
+    .titulo-1-2 {
+        margin-top: -60px;
+    }
 
-            filter: opacity(20%);
-        }
+    .para-2 {
+        margin-top: -30px;
+        width: 350px;
+    }
+
+    .foto-1 {
+        width: 900px;
+        height: 800px;
+
+        margin-left: -220px;
+        filter: opacity(20%);
+        filter: blur(60%);
+    }
+
     /* CONTEUDO 2 */
 
-        .conteudo-2 {
-            background-image: linear-gradient(to right, rgb(255, 240, 209), var(--cor1), rgb(255, 240, 209));
-            height: 3000px;
+    .conteudo-2 {
+        background-image: linear-gradient(to right, rgb(255, 240, 209), var(--cor1), rgb(255, 240, 209));
+        height: 3000px;
 
 
-            box-shadow: 0px 0px 40px 20px var(--cor3);
-            padding: 60px;
-        }
+        box-shadow: 0px 0px 40px 20px var(--cor3);
+        padding: 0px;
+    }
 
-        .titulo-2 {
-            font-weight: 500;
-            font-size: 110px;
+    .titulo-2 {
+        font-weight: 500;
+        font-size: 110px;
 
-        }
+    }
 
-        .para-3 {
-            font-weight: 200;
-            font-size: max(2.5vw);
-            margin: auto;
+    .para-3 {
+        font-weight: 200;
+        font-size: max(2.5vw);
+        margin: auto;
 
-         
-        }
 
-        .pratos {
-            display: block;
-            
-           
-            transition: .5s;
-        }
+    }
 
-        /*cards*/
-        .prato-1{
+    .pratos {
+        display: block;
 
-            width: 600px;
+
+        transition: .5s;
+        padding: 20px;
+    }
+
+    /*cards*/
+    .prato-1 {
+
+        width: 100%;
+
+
+    }
+
+    .prato-1:hover {
+        cursor: pointer;
+        transform: translateY(-0%);
+        box-shadow: 0px 0px 22px rgba(255, 166, 0, 0.397);
+
+
+
+    }
+
+    .prato-2 {
+        border: 2px solid var(--cor5);
+
+        border-radius: 8px 8px 22px 22px;
+        background: white;
+
+        transition: .5s;
+        width: 100%;
+
+    }
+
+    .prato-2:hover {
+        cursor: pointer;
+        transform: translateY(-0%);
+        box-shadow: 0px 0px 22px rgba(255, 166, 0, 0.397);
+
+
+
+    }
+
+    .prato-3 {
+        border: 2px solid var(--cor5);
+
+        border-radius: 8px 8px 22px 22px;
+        background: white;
+
+        transition: .5s;
+        width: 100%;
+
+
+    }
+
+    .prato-3:hover {
+        cursor: pointer;
+        transform: translateY(-0%);
+        box-shadow: 0px 0px 22px rgba(255, 166, 0, 0.397);
+
+
+
+    }
+
+    /* distância de um pro outro */
+
+
+    /********************************/
+    .nome-prato {
+        text-align: left;
+
+        font-weight: 500;
+        font-family: 'myfont', sans-serif;
+        font-size: 30px;
+
+        margin: 20px;
+        color: var(--cor4);
+    }
+
+    .dec-prato {
+        text-align: center;
+
+
+        font-family: "Noto Sans", sans-serif;
+        font-weight: 400;
+        font-size: max(2vw);
+
+        background: var(--cor5);
+        border-radius: 8px;
+        color: var(--cor4);
+
+        padding: 40px;
+
+        margin: 20px;
+
+
+    }
+
+    /* images */
+    .prato1 {
+        width: 100%;
+        height: 400px;
+
+        border-radius: 8px 8px 22px 22px;
+
+    }
+
+    .prato2 {
+        width: 100%;
+        height: 400px;
+
+        margin: 0px;
+
+        border-radius: 8px 8px 22px 22px;
+    }
+
+    .prato3 {
+        width: 100%;
+        height: 400px;
+
+        border-radius: 8px 8px 22px 22px;
+    }
+
+    /************************/
+
+    /* CONTEUDO 3 */
+
+    .conteudo-3 {
+
+        height: 1800px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background: var(--cor1);
+
+        color: var(--cor4);
+
+
+        margin-top: -300px;
+
+
+
+    }
+
+    .first-title {
+        text-align: center;
+        font-size: 70px;
+
+        padding: 20px;
+        margin-top: -300px;
+
+
+
+    }
+
+    .text-cont-3 {
+
+        width: 100%;
+        height: 1000px;
+
+
+        background-image: url('./img/chef-1.jpg');
+        background-position: center right;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        background-attachment: fixed;
+
+        border-radius: 0px 100px 0px 100px;
+        box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.247)
+    }
+
+
+
+    .nome-chef {
+        font-weight: 800;
+        font-size: 60px;
+        width: 200px;
+        color: var(--cor1);
+        padding: 30px;
+    }
+
+    .nome-chef-2 {
+        font-weight: 800;
+        font-size: 60px;
+        width: 200px;
+        margin-top: -140px;
+        color: var(--cor1);
+        text-indent: 75px;
+        padding: 30px;
+    }
+
+    .quali-1 {
+        padding: 30px;
+        width: 400px;
+        color: var(--cor1);
+        font-weight: 300;
+        font-size: 20px;
+
+        margin-top: -60px;
+    }
+
+
+    /*************************************/
+
+    /* CONTEUDO 4 */
+
+    .title-cardapio {
+        text-align: center;
+        color: var(--cor1);
+        font-weight: 500;
+        font-size: 110px;
+
+
+        font-family: 'myfont', sans-serif;
+    }
+
+    .para-cardapio {
+        text-align: center;
+        color: var(--cor1);
+        font-weight: 100;
+        font-size: max(2vw);
+        margin: 40px;
+
+
+
+    }
+
+    .swiper mySwiper {
+        margin-top: 800px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        max-width: 900px;
+        position: relative;
+
+        overflow: hidden;
+    }
+
+    .cardapio-container swiper-wrapper {
+        background: var(--cor1);
+    }
+
+    .cardapio-container {
+        padding: 50px 2px;
+    }
+
+    .slide swiper-slide {
+        padding: 40px 60px;
+        cursor: grab;
+    }
+
+    .slide swiper-slide:active {
+        cursor: grabbing;
+    }
+
+    .slide img {
+        width: 100%;
+        height: 60dvh;
+        margin-top: 800px;
+        margin: auto;
+
+        padding: -10px;
+        border-radius: 500px 200px 500px;
+
+
+    }
+
+    .tt-img {
+        color: var(--cor4);
+        font-weight: 700;
+        font-size: 30px;
+        text-align: center;
+        font-family: 'second-font', sans-serif;
+
+
+    }
+
+    .desc-burguer {
+        font-weight: 300;
+        color: var(--cor1);
+        margin-bottom: 20px;
+        text-align: center;
+        font-weight: 200;
+        padding: 20px;
+        font-size: max(2vw);
+    }
+
+    .desc-burguer-bolder {
+        font-weight: 800;
+        font-style: bolder;
+        color: var(--cor1);
+        margin-bottom: 20px;
+        text-align: center;
+        font-weight: 200;
+        font-size: 30px;
+    }
+
+   
+
+    /****************************************/
+
+
+    /* CONTEUDO 5 */
+
+    .conteudo-5 {
+        margin-top: 250px;
+        display: block;
+        align-items: center;
+        justify-content: center;
+        height: 1800px;
+        background: var(--cor1);
+    }
+
+    .tt-cont-5 {
+        font-weight: 600;
+        font-family: 'second-font', sans-serif;
         
-        }
 
-        .prato-1:hover {
-            cursor: pointer;
-            transform: translateY(-0%);
-            box-shadow: 0px 0px 22px rgba(255, 166, 0, 0.397);
+        font-size: 45px;
+        text-align: right;
+    }
+
+    .map {
+        width: 100%;
+        height: 400px;
+        border-radius: 20px 20px 20px 20px;
+        transition: .5s;
+       
+    }
+
+    .mapa {
+        margin: 20px;
+        width: 650px;
+        border: 10px ridge var(--cor4);
+        border-radius: 20px 20px 20px 20px;
+        box-shadow: 20px 116px 16px 4px rgba(78, 50, 23, 0.329);
+    }
+
+    .para-cont-5 {
+        font-weight: 200;
+        font-size: 22px;
+    }
+
+    .formulario .titulo {
+
+        color: #757575;
+        font-size: 1.5em;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+
+    }
+
+    .formulario {
+
+        max-width: 500px;
+        margin: auto;
+        background: white;
+        overflow: hidden;
+        padding: 20px;
+        border-radius: 16px;
+
+    }
+
+    :focus {
+        outline: none;
+    }
+
+    .label {
+        border-radius: 16px;
+        float: left;
+        width: 100%;
+        margin-bottom: 25px;
+        position: relative;
+
+    }
+
+    .input-bordas {
+
+        font: 15px/24px "Lato", Arial, sans-serif;
+        color: #333;
+        width: 100%;
+        box-sizing: border-box;
+        letter-spacing: 1px;
+        border: 1px solid #ccc;
+        border-radius: 16px;
+        padding: 7px 14px 9px;
+        transition: 0.4s;
+
+    }
+
+    .textarea {
+        resize: none !important;
+    }
+
+    .input-bordas~.focus-border:before,
+    .input-bordas~.focus-border:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 2px;
+        background-color: #754c0e;
+        transition: 0.2s;
+        transition-delay: 0.2s;
+        border-radius: 16px;
+    }
+
+    .input-bordas~.focus-border:after {
+        top: auto;
+        bottom: 0;
+        right: auto;
+        left: 0;
+        transition-delay: 0.6s;
+    }
+
+    .input-bordas~.focus-border i:before,
+    .input-bordas~.focus-border i:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 2px;
+        height: 0;
+        background-color: var(--cor4);
+        transition: 0.2s;
+        border-radius: 16px;
+    }
+
+    .input-bordas~.focus-border i:after {
+        left: auto;
+        right: 0;
+        top: auto;
+        bottom: 0;
+        transition-delay: 0.4s;
+    }
+
+    .input-bordas:focus~.focus-border:before,
+    .input-bordas:focus~.focus-border:after {
+        width: 100%;
+        transition: 0.2s;
+        transition-delay: 0.6s;
+    }
+
+    .input-bordas:focus~.focus-border:after {
+        transition-delay: 0.2s;
+    }
+
+    .input-bordas:focus~.focus-border i:before,
+    .input-bordas:focus~.focus-border i:after {
+        height: 100%;
+        transition: 0.2s;
+    }
+
+    .input-bordas:focus~.focus-border i:after {
+        transition-delay: 0.4s;
+    }
 
 
+    .button-form {
 
-        }
-
-        .prato-2 {
-            border: 2px solid var(--cor5);
-
-            border-radius: 8px 8px 22px 22px;
-            background: white;
-
-            transition: .5s;
-            width: 600px;
-          
-        }
-
-        .prato-2:hover {
-            cursor: pointer;
-            transform: translateY(-0%);
-            box-shadow: 0px 0px 22px rgba(255, 166, 0, 0.397);
+        background-color: rgb(119, 80, 36);
+        padding: 0.5em 1.3em;
+        color: #fff;
+        font-size: 1.2em;
+        border: none;
+        cursor: pointer;
 
 
+    }
 
-        }
+    .borda-inversa {
 
-        .prato-3 {
-            border: 2px solid var(--cor5);
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border-radius: 80px;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        -webkit-transition-property: background;
+        transition-property: background;
+        box-shadow: inset 0 0 0 2px rgba(105, 60, 34, 0.555), 0 0 1px rgba(0, 0, 0, 0);
 
-            border-radius: 8px 8px 22px 22px;
-            background: white;
+    }
 
-            transition: .5s;
-            width: 600px;
-           
-        }
+    .borda-inversa:hover,
+    .borda-inversa:focus,
+    .borda-inversa:active {
 
-        .prato-3:hover {
-            cursor: pointer;
-            transform: translateY(-0%);
-            box-shadow: 0px 0px 22px rgba(255, 166, 0, 0.397);
+        background: none;
+        color: var(--cor4);
 
+    }
 
+    .txt-cont-5 {
+        padding: 200px;
+    }
 
-        }
-
-        /* distância de um pro outro */
-      
-
-        /********************************/
-        .nome-prato {
-            text-align: left;
-
-            font-weight: 500;
-            font-family: 'myfont', sans-serif;
-            font-size: 30px;
-
-            margin: 20px;
-            color: var(--cor4);
-        }
-
-        .dec-prato {
-            text-align: center;
-
-
-            font-family: "Noto Sans", sans-serif;
-            font-weight: 400;
-            font-size: max(2vw);
-
-            background: var(--cor5);
-            border-radius: 8px;
-            color: var(--cor4);
-
-            padding: 40px;
-
-            margin: 20px;
-
-
-        }
-
-        /* images */
-        .prato1 {
-            width: 600px;
-            height: 400px;
-
-            border-radius: 8px 8px 22px 22px;
-
-        }
-
-        .prato2 {
-            width: 600px;
-            height: 400px;
-
-            margin: 0px;
-
-            border-radius: 8px 8px 22px 22px;
-        }
-
-        .prato3 {
-            width: 600px;
-            height: 400px;
-
-            border-radius: 8px 8px 22px 22px;
-        }
-
-/************************/
+    /*Anti-span*/
+    .naoexibir {
+        display: none;
+    }
 
 }
