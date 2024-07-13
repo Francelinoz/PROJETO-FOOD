@@ -968,6 +968,9 @@ nav {
         display: none;
 
     }
+    body{
+        overflow-x: hidden;
+    }
 
     /**** CONTEUDO 1 *****/
     .conteudo-1 {
@@ -996,8 +999,8 @@ nav {
     }
 
     .foto-1 {
-        width: 900px;
-        height: 800px;
+        width: 538px;
+        height: 630px;
 
         margin-left: -220px;
         filter: opacity(20%);
@@ -1370,18 +1373,19 @@ nav {
         width: 650px;
         border: 10px ridge var(--cor4);
         border-radius: 20px 20px 20px 20px;
-        box-shadow: 20px 116px 16px 4px rgba(78, 50, 23, 0.329);
+        box-shadow: 10px 116px 16px 4px rgba(78, 50, 23, 0.329);
     }
 
     .para-cont-5 {
         font-weight: 200;
-        font-size: 22px;
+        font-size: max(2vw);
     }
 
     .formulario .titulo {
 
         color: #757575;
-        font-size: 1.5em;
+        font-size: max(4vw);
+        font-weight: 550;
         margin-bottom: 10px;
         padding-bottom: 10px;
 
@@ -1389,8 +1393,9 @@ nav {
 
     .formulario {
 
-        max-width: 500px;
-        margin: auto;
+        max-width: 769px;
+        margin: 0;
+
         background: white;
         overflow: hidden;
         padding: 20px;
@@ -1407,7 +1412,7 @@ nav {
         float: left;
         width: 100%;
         margin-bottom: 25px;
-        position: relative;
+        position:static;
 
     }
 
