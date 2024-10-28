@@ -52,6 +52,7 @@ body {
 /* nav bar */
 nav {
     margin: 0;
+    z-index: 9999999;
 
 }
 
@@ -210,6 +211,67 @@ nav {
 
 
 }
+.ancora-3{
+    margin-left: 60px;
+    padding: 15px;
+    text-decoration: none;
+
+    color: var(--cor1);
+
+    background: var(--cor4);
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+
+    transition: .5s;
+    font-weight: 600;
+
+    box-shadow: 0px 0px 6px var(--cor4);
+
+}
+
+.ancora-3:hover {
+    background: var(--cor1);
+    color: var(--cor4);
+
+    font-weight: 600;
+
+    font-size: 11px;
+    border-radius: 100px;
+
+    box-shadow: 0px 0px 12px var(--cor4);
+
+
+}
+.ancora-4{
+    margin-left: 60px;
+    padding: 15px;
+    text-decoration: none;
+
+    color: var(--cor1);
+
+    background: var(--cor4);
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+
+    transition: .5s;
+    font-weight: 600;
+
+    box-shadow: 0px 0px 6px var(--cor4);
+
+}
+.ancora-4:hover {
+    background: var(--cor1);
+    color: var(--cor4);
+
+    font-weight: 600;
+
+    font-size: 11px;
+    border-radius: 100px;
+
+    box-shadow: 0px 0px 12px var(--cor4);
+
+
+}
 
 /*****************************************************/
 
@@ -352,6 +414,7 @@ nav {
     transform: translateY(-5%);
 
     box-shadow: 0px 0px 22px rgba(255, 166, 0, 0.397);
+    z-index: 1000;
 }
 
 .prato-2 {
