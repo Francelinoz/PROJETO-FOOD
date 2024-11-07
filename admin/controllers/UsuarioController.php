@@ -6,8 +6,8 @@ class UsuarioController {
         $this->obj = new UsuarioModel();
     }
 
-    public function listaUsuarios(){
-        $dados = $this->obj->getUsuarios();
+    public function listaUsuarios($pdo){
+        $dados = $this->obj->getUsuarios($pdo);
         include_once 'views/usuarios.php';
     }
 
@@ -16,4 +16,4 @@ class UsuarioController {
         include_once 'views/usuarios_editar.php';
     }
 
-}
+}   

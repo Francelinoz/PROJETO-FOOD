@@ -11,7 +11,7 @@
 <body>
     
     <h2>Cadastrar</h2>
-    <form action="/login" method="post">
+    <form method="post">
         <label for="email">Email:</label><br>
         <input type="email" id="email" name="email" required><br><br>
         
