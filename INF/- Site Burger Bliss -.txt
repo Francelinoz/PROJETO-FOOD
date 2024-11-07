@@ -27,3 +27,11 @@ The Unicorn Burger - Um hambúrguer mágico e colorido, coberto com ingredientes
 The Zombie Burger - Um hambúrguer assustadoramente delicioso, servido em um pão preto com olhos de queijo e uma boca de ketchup.
 
 The Godlike Burger - O hambúrguer mais delicioso e supremo do universo, feito com os melhores ingredientes e preparado com maestria divina.
+
+
+Referencia de cadastro:
+nome;
+telefone;
+endereço;
+email;
+senha;
