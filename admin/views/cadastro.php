@@ -10,7 +10,7 @@
 </head>
 <body>
     
-    <h2>Login</h2>
+    <h2>Cadastrar</h2>
     <form action="/login" method="post">
         <label for="email">Email:</label><br>
         <input type="email" id="email" name="email" required><br><br>
