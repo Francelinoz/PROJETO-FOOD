@@ -3,9 +3,9 @@ require_once 'controllers/UsuarioController.php';
 
 
 if (isset($_GET['url'])){
-    if($_GET['url'] == 'cadastro-usuario'){
+    if($_GET['url'] == 'cadastrar-usuario'){
         $usu = new UsuarioController();
-        $usu->listaUsuarios();
+        $usu->cadastrarUsuario($pdo);
     }
     if($_GET['url'] == 'editar-usuario'){
         $usu = new UsuarioController();
@@ -13,6 +13,10 @@ if (isset($_GET['url'])){
     }
     if($_GET['url'] == 'y'){
         echo "página Y";
+    }
+    if($_GET['url'] == 'login'){
+        $usu = new UsuarioController();
+        $usu->login($pdo);
     }
 
 }else{

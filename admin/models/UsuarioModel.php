@@ -1,7 +1,7 @@
 <?php
-include_once 'PROJETO-FOOD/php/db.php';
+include_once '../php/db.php';
 
-class UsuarioModel 
+class Usuario
 {
     private $id;
     private $email;
@@ -13,24 +13,48 @@ class UsuarioModel
         $this -> senha = $senha;
         $this -> id = $id;
     }
+    public function cadastrarUsuario($pdo){
 
-    public function getUsuarios($pdo) {
-        try {
-            $sql = "SELECT id, email, senha FROM usuarios";
-            $result = $pdo->query($sql);   
-            return $result->fetchAll(PDO::FETCH_ASSOC);
-
-
-        } catch (PDOException $e) {
-
-            echo "Erro ao buscar usuários: " . $e->getMessage();
-            return [];
-        }
+        $sql = "INSERT INTO usuarios(email,senha) VALUES(:email, :senha)";
+        $prepare = $pdo->prepare($sql);
+        $prepare->execute([
+            ":email" => $this->email,
+            ":senha" => $this->senha,
+        ]);
     }
+    public function listarUsuarios($pdo)
+    {
+    try {
+        $sql = "SELECT * FROM usuarios";
+        $prepare = $pdo->query($sql);
+        return $prepare->fetchAll(\PDO::FETCH_ASSOC);
 
+    } catch (PDOException $e) {
+
+        echo "Erro ao buscar usuários: " . $e->getMessage();
+        return [];
+    }}
+    
+    public function excluirLocatario($pdo){
+        $prepare = $pdo->prepare("DELETE FROM usuarios WHERE id = ?");
+        $prepare->execute([$this -> id]);
+    }
 
     public function editUsuarios(){
         
         return "Dados do usuarios";
     }
+
+    public function login($pdo)
+    {
+    try {
+        $sql = "SELECT * FROM usuarios";
+        $prepare = $pdo->query($sql);
+        return $prepare->fetchAll(\PDO::FETCH_ASSOC);
+
+    } catch (PDOException $e) {
+
+        echo "Erro ao buscar usuários: " . $e->getMessage();
+        return [];
+    }}
 }

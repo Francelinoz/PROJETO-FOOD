@@ -1,6 +1,3 @@
-<?php
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +15,7 @@
         <label for="senha">Senha:</label><br>
         <input type="password" id="senha" name="senha" required><br><br>
         
-        <input type="submit" value="Enviar">
+        <input type="submit" value="submit" name="submit">
     </form>        
     
 </body>
