@@ -18,5 +18,9 @@
         <input type="submit" value="Enviar">
     </form>        
     
+    <?php if (isset($_GET['error'])): ?>
+        <p style="color: red;">E-mail ou senha incorretos!</p>
+    <?php endif; ?>
+
 </body>
 </html>

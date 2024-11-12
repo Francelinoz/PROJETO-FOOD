@@ -6,15 +6,17 @@ class UsuarioController {
         $this->obj = new Usuario();
     }
     public function cadastrarUsuario($pdo){
-        //$dados = $this->obj->listarUsuarios($pdo);
-        if(isset($_POST['submit'])){ 
-            $objUsuario = new Usuario(
-            $email = $_POST['email'],
-            $senha = $_POST['senha']);
-            
-            $objUsuario -> cadastrarUsuario($pdo);
-            echo "Usuario Cadastrado";
-        }
+            if (isset($_POST['submit'])) { 
+                $email = $_POST['email'];
+                $senha = $_POST['senha'];
+                $usuario = new Usuario($email, $senha);
+                
+                $resultado = $usuario->cadastrarUsuario($pdo);
+                if ($resultado === "Usuário cadastrado com sucesso!") {
+                    echo $resultado; 
+                } else {
+                    echo $resultado;
+                }}
         include_once 'views/cadastro.php';
     }
     public function listaUsuarios($pdo){
@@ -27,15 +29,24 @@ class UsuarioController {
         include_once 'views/usuarios_editar.php';
     }
 
-    public function login($pdo){
-        //$dados = $this->obj->listarUsuarios($pdo);
-        if(isset($_POST['submit'])){ 
-            $objUsuario = new Usuario(
-            $email = $_POST['email'],
-            $senha = $_POST['senha']);
-            
-            $objUsuario -> login($pdo);
-            echo "Usuario Cadastrado";
+    public function login($pdo) {
+
+        if (isset($_POST['submit'])) {
+            $email = $_POST['email'];
+            $senha = $_POST['senha'];
+            $usuarioModel = new Usuario($email, $senha);
+
+            $usuario = $usuarioModel->login($pdo);
+
+
+            if ($usuario) {
+                session_start();
+                $_SESSION['user_id'] = $usuario['id'];
+                $_SESSION['email'] = $usuario['email'];
+                header("Location:"); 
+            } else {
+                header("Location:PROJETO-FOOD/index.html");
+            }
         }
         include_once 'views/login.php';
     }
