@@ -1,23 +1,27 @@
 <?php
 require_once 'models/UsuarioModel.php';
 class UsuarioController {
+
     public $obj;
+
     public function __construct(){
         $this->obj = new Usuario();
     }
     public function cadastrarUsuario($pdo){
-            if (isset($_POST['submit'])) { 
-                $email = $_POST['email'];
-                $senha = $_POST['senha'];
-                $usuario = new Usuario($email, $senha);
-                
-                $resultado = $usuario->cadastrarUsuario($pdo);
-                if ($resultado === "Usuário cadastrado com sucesso!") {
-                    echo $resultado; 
-                } else {
-                    echo $resultado;
-                }}
+
+        if (isset($_POST['submit'])) { 
+            
+            $usuario = new Usuario(
+            $nome = $_POST['nome'],
+            $numero = $_POST['numero'],
+            $email = $_POST['email'],
+            $senha = $_POST['senha']);
+            $usuario-> cadastrarUsuario($pdo);
+            
         include_once 'views/cadastro.php';
+        }
+       
+
     }
     public function listaUsuarios($pdo){
         $dados = $this->obj->listarUsuarios($pdo);
@@ -35,7 +39,6 @@ class UsuarioController {
             $email = $_POST['email'];
             $senha = $_POST['senha'];
             $usuarioModel = new Usuario($email, $senha);
-
             $usuario = $usuarioModel->login($pdo);
 
 
@@ -50,5 +53,4 @@ class UsuarioController {
         }
         include_once 'views/login.php';
     }
-
 }   
