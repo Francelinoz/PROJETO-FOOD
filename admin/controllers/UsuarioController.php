@@ -22,10 +22,18 @@ class UsuarioController
     }
     public function listaUsuarios($pdo)
     {
-        $dados = $this->obj->listarUsuarios($pdo);
+        $sql = "SELECT * FROM usuarios";
+        $prepare = $pdo->query($sql);
+        return $prepare->fetchAll(\PDO::FETCH_ASSOC);
+
         include_once 'views/usuarios.php';
     }
 
+    public function excluirUsuarios()
+    {
+        //$dados = $this->obj->excluirUsuarios();
+        include_once 'views/usuarios_editar.php';
+    }
     public function editarUsuarios()
     {
         $dados = $this->obj->editUsuarios();

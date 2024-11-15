@@ -13,6 +13,24 @@
 </body>
 
 <?php
+
+$usuario = new Usuario();
+$usuario = $usuarios -> listarUsuarios($pdo);
+
+Foreach($usuario as $usuario){
+    echo "<br>";
+    echo " ID: " . $usuario['id'];
+    echo "<br>";
+    echo " NOME: " . $usuario['nome'];
+    echo "<br>";
+    echo " NÚMERO: " . $usuario['numero'];
+    echo "<br>";
+    echo " EMAIL: " . $usuario['email'];
+    echo "<br>";
+    echo " SENHA: " . $usuario['senha'];
+    echo "<br>";
+}
+
 if (isset($_POST['submit'])){
     session_start();
     session_destroy();

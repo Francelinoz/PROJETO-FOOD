@@ -53,7 +53,7 @@ class Usuario
         }
     }
 
-    public function excluirLocatario($pdo)
+    public function excluirUsuarios($pdo)
     {
         $prepare = $pdo->prepare("DELETE FROM usuarios WHERE id = ?");
         $prepare->execute([$this->id]);
