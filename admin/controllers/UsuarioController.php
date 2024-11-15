@@ -15,6 +15,7 @@ class UsuarioController
         if (isset($_POST['submit'])) {
             $usuario = new Usuario($_POST['nome'], $_POST['numero'], $_POST['email'], $_POST['senha']);
             echo $usuario->cadastrarUsuario($pdo);
+            header('Location: /GitHub/PROJETO-FOOD/');
         }
 
         include_once 'views/cadastro.php';
