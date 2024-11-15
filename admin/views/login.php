@@ -15,7 +15,7 @@
         <label for="senha">Senha:</label><br>
         <input type="password" id="senha" name="senha" required><br><br>
         
-        <input type="submit" value="Enviar">
+        <input type="submit" value="Enviar" name="submit">
     </form>        
     
     <?php if (isset($_GET['error'])): ?>

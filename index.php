@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -42,8 +46,15 @@
                     <a href="#cardapio" class="ancora-1">Cardápio</a>
                     <a href="#endereco" class=" ancora-1">Endereço</a>
                     <a href="#redes" class="ancora-2">Redes Sociais</a>
-                    <a href="admin/login" class="ancora-3">Login</a>
-                    <a href="admin/cadastrar-usuario" class="ancora-4">cadastro</a>
+                    <?php
+                    if(isset($_SESSION['nome'])){
+                        echo '<a href="" class="ancora-3">'.$_SESSION['nome'].'</a>';
+                    }else{
+                        echo '<a href="admin/login" class="ancora-3">Login</a>';
+                        echo '<a href="admin/cadastrar-usuario" class="ancora-4">cadastro</a>';
+                    }
+                    ?>                    
+                    
 
                 </div>
             </div>

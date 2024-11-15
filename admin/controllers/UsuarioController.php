@@ -1,56 +1,57 @@
 <?php
 require_once 'models/UsuarioModel.php';
-class UsuarioController {
+class UsuarioController
+{
 
     public $obj;
 
-    public function __construct(){
+    public function __construct()
+    {
         $this->obj = new Usuario();
     }
-    public function cadastrarUsuario($pdo){
+    public function cadastrarUsuario($pdo)
+    {
 
-        if (isset($_POST['submit'])) { 
-            
-            $usuario = new Usuario(
-            $nome = $_POST['nome'],
-            $numero = $_POST['numero'],
-            $email = $_POST['email'],
-            $senha = $_POST['senha']);
-            $usuario-> cadastrarUsuario($pdo);
-            
-        include_once 'views/cadastro.php';
+        if (isset($_POST['submit'])) {
+            $usuario = new Usuario($_POST['nome'], $_POST['numero'], $_POST['email'], $_POST['senha']);
+            echo $usuario->cadastrarUsuario($pdo);
         }
-       
 
+        include_once 'views/cadastro.php';
     }
-    public function listaUsuarios($pdo){
+    public function listaUsuarios($pdo)
+    {
         $dados = $this->obj->listarUsuarios($pdo);
         include_once 'views/usuarios.php';
     }
 
-    public function editarUsuarios(){
-        $dados = $this->obj->editUsuarios();        
+    public function editarUsuarios()
+    {
+        $dados = $this->obj->editUsuarios();
         include_once 'views/usuarios_editar.php';
     }
 
-    public function login($pdo) {
+    public function login($pdo)
+    {
 
         if (isset($_POST['submit'])) {
             $email = $_POST['email'];
             $senha = $_POST['senha'];
-            $usuarioModel = new Usuario($email, $senha);
+            $usuarioModel = new Usuario(null, null, $email, $senha);
             $usuario = $usuarioModel->login($pdo);
 
 
             if ($usuario) {
                 session_start();
                 $_SESSION['user_id'] = $usuario['id'];
+                $_SESSION['nome'] = $usuario['nome'];
+                $_SESSION['numero'] = $usuario['numero'];
                 $_SESSION['email'] = $usuario['email'];
-                header("Location:"); 
+                header("Location: /GitHub/PROJETO-FOOD/");
             } else {
-                header("Location:PROJETO-FOOD/index.html");
+                header("Location: /GitHub/PROJETO-FOOD/admin/login");
             }
         }
         include_once 'views/login.php';
     }
-}   
+}
