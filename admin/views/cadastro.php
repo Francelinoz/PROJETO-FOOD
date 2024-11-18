@@ -46,6 +46,21 @@
         border-bottom-right-radius: 20px;
        
     }
+    #nome{
+        border-radius: 8px;
+        border: none;
+        width: 400px;
+        font-size: 20px;
+        background: rgba(255, 255, 255, 0.657);
+        padding: 10px;
+        color: white;
+        transition: .4s;
+    }
+    #nome:hover{
+        background: rgba(255, 255, 255);
+        box-shadow: 0px 0px 8px white;
+        color: black;
+    }
     #email{
         border-radius: 8px;
         border: none;
@@ -57,6 +72,21 @@
         transition: .4s;
     }
     #email:hover{
+        background: rgba(255, 255, 255);
+        box-shadow: 0px 0px 8px white;
+        color: black;
+    }
+    #telefone{
+        border-radius: 8px;
+        border: none;
+        width: 400px;
+        font-size: 20px;
+        background: rgba(255, 255, 255, 0.657);
+        color: white;
+        padding: 10px;
+        transition: .4s;
+    }
+    #telefone:hover{
         background: rgba(255, 255, 255);
         box-shadow: 0px 0px 8px white;
         color: black;
