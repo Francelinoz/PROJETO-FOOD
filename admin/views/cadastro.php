@@ -1,5 +1,5 @@
 <?php
-
+  
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -159,9 +159,13 @@
                 <input type="submit" class="centralizado" name="cadastrar" value="Enviar">
             </div>
         </form>       
-    </div>
-         
- 
-    
+    </div>    
 </body>
+<?php
+    if (isset($_POST['Enviar']))
+    {
+     Header('Location: /GitHub/PROJETO-FOOD/');
+    }
+
+?>
 </html>

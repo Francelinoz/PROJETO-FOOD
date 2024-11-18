@@ -30,7 +30,7 @@ class Usuario
                 ':email' => $this->email,
                 ':senha' => $this->senha
             ]);
-
+            
             if ($result) {
                 return "Usuário cadastrado com sucesso!";
             } else {
