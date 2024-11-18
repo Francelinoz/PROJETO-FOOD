@@ -26,7 +26,6 @@
         left: 50%;
         transform: translate(-50%, -50%);
        box-shadow: 0px 0px 16px rgba(255, 255, 255, 0.457);
-
     }
     h2{
         background: rgba(255, 255, 255, 0.657);
@@ -114,9 +113,16 @@
     <div class="box">
         <h2>Cadastrar</h2>
         <form id="form" action="" method="post">
+
+            <label for="nome">Nome</label><br>
+            <input type="nome" id="nome" name="nome" required><br><br>
+
             <label for="email">Email</label><br>
             <input type="email" id="email" name="email" required><br><br>
-        
+
+            <label for="telefone">Telefone</label><br>
+            <input type="telefone" id="telefone" name="telefone" required><br><br>
+            
             <label for="senha">Senha</label><br>
             <input type="password" id="senha" name="senha" required><br><br>
             <div class="container">
