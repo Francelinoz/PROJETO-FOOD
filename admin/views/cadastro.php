@@ -10,7 +10,7 @@
 </head>
 <style>
     body{
-        background-image: url('back.jpg');
+        background-image: url('admin/views/back.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         text-align: center;
