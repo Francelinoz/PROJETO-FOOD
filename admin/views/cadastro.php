@@ -6,11 +6,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🥷🏽nimda🥷🏽</title>
+    <title>Cadastrar</title>
 </head>
 <style>
     body{
-        background-image: url('admin/views/back.jpg');
+        background-image:url('back.jpg'); 
         background-size: cover;
         background-repeat: no-repeat;
         text-align: center;
@@ -117,11 +117,11 @@
             <label for="nome">Nome</label><br>
             <input type="nome" id="nome" name="nome" required><br><br>
 
-            <label for="email">Email</label><br>
-            <input type="email" id="email" name="email" required><br><br>
-
             <label for="telefone">Telefone</label><br>
             <input type="telefone" id="telefone" name="telefone" required><br><br>
+
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email" required><br><br>
             
             <label for="senha">Senha</label><br>
             <input type="password" id="senha" name="senha" required><br><br>
