@@ -31,7 +31,8 @@ class UsuarioController
 
     public function excluirUsuarios()
     {
-        //$dados = $this->obj->excluirUsuarios();
+        $usu = new UsuarioController('','','','',$_GET['id']);
+        $usu -> excluirUsuarios();
         include_once 'views/usuarios_editar.php';
     }
     public function editarUsuarios()
@@ -63,4 +64,5 @@ class UsuarioController
         }
         include_once 'views/login.php';
     }
+    
 }
