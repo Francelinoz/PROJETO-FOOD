@@ -31,14 +31,9 @@ class UsuarioController
 
     public function excluirUsuarios()
     {
-        $usu = new UsuarioController('','','','',$_GET['id']);
+        $usu = new UsuarioController('','','','','',$_GET['id']);
         $usu -> excluirUsuarios();
-        include_once 'views/usuarios_editar.php';
-    }
-    public function editarUsuarios()
-    {
-        $dados = $this->obj->editUsuarios();
-        include_once 'views/usuarios_editar.php';
+        include_once "Location: /GitHub/PROJETO-FOOD/";
     }
 
     public function login($pdo)

@@ -59,12 +59,6 @@ class Usuario
         $prepare->execute([$this->id]);
     }
 
-    public function editUsuarios()
-    {
-
-        return "Dados do usuarios";
-    }
-
     public function login($pdo)
     {
         $sql = "SELECT * FROM usuarios WHERE email = :email and senha =:senha LIMIT 1";
@@ -74,23 +68,5 @@ class Usuario
         $stmt->execute();
 
         return $stmt->fetch(PDO::FETCH_ASSOC);
-    }
-    public function depositar($pdo){
-        try {
-            $sql = "INSERT INTO usuarios from saldo";
-            $prepare = $pdo->prepare($sql);
-
-            $result = $prepare->execute([
-                ':saldo' => $this->saldo;
-            ]);
-            
-            if ($result) {
-                return "Usuário cadastrado com sucesso!";
-            } else {
-                return "Erro ao cadastrar usuário.";
-            }
-        } catch (PDOException $e) {
-            return "Erro: " . $e->getMessage();
-        }
     }
 }
