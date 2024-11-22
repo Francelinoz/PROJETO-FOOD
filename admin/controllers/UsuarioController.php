@@ -1,6 +1,5 @@
 <?php
 require_once 'models/UsuarioModel.php';
-
 class UsuarioController
 {
 
@@ -21,33 +20,34 @@ class UsuarioController
         }
 
         include_once 'views/cadastro.php';
+        
     }
 
     public function editarUsuario($pdo)
-    {
-        if (isset($_GET['id'])) {
-            session_start();
-            $usuario = new Usuario($_GET['nome'], $_GET['numero'], $_GET['saldo'], $_GET['email'], $_GET['senha'], $_GET['id']);
-            echo $usuario->editarUsuario($pdo);
-            header('Location: /GitHub/PROJETO-FOOD/');
-            exit;
-        } else {
-            echo "ID do usuário não encontrado.";
-        }
-        include_once 'views/login.php';
+{
+    if (isset($_GET['id'])) {
+        session_start();
+        $usuario = new Usuario($_GET['nome'], $_GET['numero'], $_GET['saldo'], $_GET['email'], $_GET['senha'], $_GET['id']);
+        echo $usuario->editarUsuario($pdo);
+        header('Location: /GitHub/PROJETO-FOOD/');
+        exit;
+    } else {
+        echo "ID do usuário não encontrado.";
     }
-
-    public function excluirUsuarios($pdo)
-    {
-        if (isset($_GET['id'])) {
-            $usu = new Usuario('', '', '', '', '', $_GET['id']);
-            $usu->excluirUsuarios($pdo);
-            header("Location: /GitHub/PROJETO-FOOD/");
-            exit;
-        } else {
-            echo "ID do usuário não encontrado.";
-        }
+    include_once 'views/login.php'; 
+}
+    
+public function excluirUsuarios($pdo)
+{
+    if (isset($_GET['id'])) {
+        $usu = new Usuario('', '', '', '', '', $_GET['id']); 
+        $usu->excluirUsuarios($pdo); 
+        header("Location: /GitHub/PROJETO-FOOD/");
+        exit;
+    } else {
+        echo "ID do usuário não encontrado.";
     }
+}
 
     public function login($pdo)
     {
@@ -55,7 +55,7 @@ class UsuarioController
         if (isset($_POST['submit'])) {
             $email = $_POST['email'];
             $senha = $_POST['senha'];
-            $usuarioModel = new Usuario(null, null, null, $email, $senha);
+            $usuarioModel = new Usuario(null, null,null, $email, $senha);
             $usuario = $usuarioModel->login($pdo);
 
 
@@ -73,5 +73,5 @@ class UsuarioController
             }
         }
         include_once 'views/login.php';
-    }
+    }    
 }
