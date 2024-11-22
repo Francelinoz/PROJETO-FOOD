@@ -1,7 +1,7 @@
 <?php
-    if(!isset($_SESSION)){
-        session_start();
-    }
+if (!isset($_SESSION)) {
+    session_start();
+}
 ?>
 
 <!DOCTYPE html>
@@ -35,7 +35,7 @@
                         <a href="#chef" class="ancora">Chef</a>
                         <a href="#cardapio" class="ancora">Cardápio</a>
                         <a href="#endereco" class=" ancora">Endereço</a>
-                    
+
                     </ul>
                 </div>
                 <img src="./img/logo1.png" alt="" class="logo1">
@@ -49,14 +49,22 @@
                     <a href="#endereco" class=" ancora-1">Endereço</a>
                     <a href="#redes" class="ancora-2">Redes Sociais</a>
                     <?php
+
                     if(isset($_SESSION['nome'])){
                         echo '<a href="admin/views/logout.php" class="ancora-3">Olá, '.$_SESSION['nome'].'</a>';
                     }else{
                         echo '<a href="admin/views/login.php" class="ancora-3">Login</a>';
+                    }
+
+                    if (isset($_SESSION['nome'])) {
+                        echo '<a href="admin/views/logout.php" class="ancora-3">Olá, ' . $_SESSION['nome'] . '</a>';
+                    } else {
+                        echo '<a href="admin/login" class="ancora-3">Login</a>';
+
                         echo '<a href="admin/views/cadastro.php" class="ancora-4">cadastro</a>';
                     }
-                    ?>                    
-                    
+                    ?>
+
 
                 </div>
             </div>
