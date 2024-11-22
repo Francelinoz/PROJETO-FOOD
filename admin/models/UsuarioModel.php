@@ -5,15 +5,15 @@ class Usuario
 {
     private $id;
     private $nome;
-    private $numero;
+    private $telefone;
     private $saldo;
     private $email;
     private $senha;
 
-    public function __construct($nome = null, $numero = null, $saldo = null, $email = null, $senha = null, $id = null)
+    public function __construct($nome = null, $telefone = null, $saldo = null, $email = null, $senha = null, $id = null)
     {
         $this->nome = $nome;
-        $this->numero = $numero;
+        $this->telefone = $telefone;
         $this->saldo = $saldo;
         $this->email = $email;
         $this->senha = $senha;
@@ -23,12 +23,12 @@ class Usuario
     public function cadastrarUsuario($pdo)
     {
         try {
-            $sql = "INSERT INTO usuarios (nome, numero,saldo, email, senha) VALUES (:nome, :numero, :saldo, :email, :senha)";
+            $sql = "INSERT INTO usuarios (nome, telefone,saldo, email, senha) VALUES (:nome, :telefone, :saldo, :email, :senha)";
             $prepare = $pdo->prepare($sql);
 
             $result = $prepare->execute([
                 ':nome' => $this->nome,
-                ':numero' => $this->numero,
+                ':telefone' => $this->telefone,
                 ':saldo'=> $this->saldo,
                 ':email' => $this->email,
                 ':senha' => $this->senha
@@ -47,13 +47,13 @@ class Usuario
     public function editarUsuario($pdo)
 {
     try {
-        $sql = "UPDATE usuarios SET nome = :nome, numero = :numero, saldo = :saldo, email = :email, senha = :senha WHERE id = :id";
+        $sql = "UPDATE usuarios SET nome = :nome, telefone = :telefone, saldo = :saldo, email = :email, senha = :senha WHERE id = :id";
         $prepare = $pdo->prepare($sql);
 
         $result = $prepare->execute([  
             ':id' => $this->id,
             ':nome' => $this->nome,
-            ':numero' => $this->numero,
+            ':telefone' => $this->telefone,
             ':saldo' => $this->saldo,
             ':email' => $this->email,
             ':senha' => $this->senha

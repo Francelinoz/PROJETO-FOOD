@@ -11,7 +11,7 @@
 </head>
 <style>
     body {
-        background-image: url('back.jpg');
+        background-image: url('views/back.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         text-align: center;
@@ -177,12 +177,6 @@
         </form>
     </div>
 </body>
-<?php
-if (isset($_POST['Enviar'])) {
-    Header('Location: /GitHub/PROJETO-FOOD/');
-    exit;
-}
 
-?>
 
 </html>

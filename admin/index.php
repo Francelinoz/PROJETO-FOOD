@@ -19,6 +19,10 @@ if (isset($_GET['url'])){
         $usu = new UsuarioController();
         $usu->login($pdo);
     }
+    if($_GET['url'] == 'logout'){
+        $usu = new UsuarioController();
+        $usu->logout($pdo);
+    }
 }else{
     header('Location: /GitHub/PROJETO-FOOD/');
     exit;

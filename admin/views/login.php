@@ -13,7 +13,7 @@
     }
 
     body {
-        background-image: url('../../admin/views/back-2.jpg');
+        background-image: url('views/back-2.jpg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;

@@ -12,8 +12,8 @@ class UsuarioController
     public function cadastrarUsuario($pdo)
     {
 
-        if (isset($_POST['submit'])) {
-            $usuario = new Usuario($_POST['nome'], $_POST['numero'], $_POST['email'], $_POST['senha']);
+        if (isset($_POST['cadastrar'])) {
+            $usuario = new Usuario($_POST['nome'], $_POST['telefone'], 0, $_POST['email'], $_POST['senha']);
             echo $usuario->cadastrarUsuario($pdo);
             header('Location: /GitHub/PROJETO-FOOD/');
             exit;
@@ -27,14 +27,14 @@ class UsuarioController
 {
     if (isset($_GET['id'])) {
         session_start();
-        $usuario = new Usuario($_GET['nome'], $_GET['numero'], $_GET['saldo'], $_GET['email'], $_GET['senha'], $_GET['id']);
+        $usuario = new Usuario($_GET['nome'], $_GET['numero'], 0, $_GET['saldo'], $_GET['email'], $_GET['senha'], $_GET['id']);
         echo $usuario->editarUsuario($pdo);
         header('Location: /GitHub/PROJETO-FOOD/');
         exit;
     } else {
         echo "ID do usuário não encontrado.";
     }
-    include_once 'views/login.php'; 
+    //include_once 'views/login.php'; 
 }
     
 public function excluirUsuarios($pdo)
@@ -73,5 +73,14 @@ public function excluirUsuarios($pdo)
             }
         }
         include_once 'views/login.php';
+    }    
+    public function logout($pdo)
+    {
+        if (isset($_POST['submit'])){
+            session_start();
+            session_destroy();
+            header('Location: /GitHub/PROJETO-FOOD/');
+        }
+        include_once 'views/logout.php';
     }    
 }
