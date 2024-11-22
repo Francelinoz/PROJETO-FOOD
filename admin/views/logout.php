@@ -19,13 +19,14 @@ include_once '../constrollers/UsuarioController.php';
 
 
 $usu = new UsuarioController();
-$usuarios = $usu -> listaUsuarios($pdo);
+$usuarios = $usu -> editarUsuario($pdo);
 
 foreach($usu as $usu){
     echo "<br>";
     echo " ID: " . $usu['id'];
     echo " NOME: " . $usu['nome'];
     echo " NÚMERO: " . $usu['numero'];
+    echo " SALDO: " . $USU['saldo'];
     echo " EMAIL: " . $usu['email'];
     echo " SENHA: " . $usu['senha'];
     echo "<a href='excluir-usuario?id=" . $usu['id'] . "'>  DELETE</a>";

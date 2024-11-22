@@ -1,4 +1,5 @@
 <?php
+
 include_once '../php/db.php';
 
 class Usuario
@@ -6,13 +7,15 @@ class Usuario
     private $id;
     private $nome;
     private $numero;
+    private $saldo;
     private $email;
     private $senha;
 
-    public function __construct($nome = null, $numero = null, $email = null, $senha = null, $id = null)
+    public function __construct($nome = null, $numero = null, $saldo = null, $email = null, $senha = null, $id = null)
     {
         $this->nome = $nome;
         $this->numero = $numero;
+        $this->saldo = $saldo;
         $this->email = $email;
         $this->senha = $senha;
         $this->id = $id;
@@ -21,16 +24,17 @@ class Usuario
     public function cadastrarUsuario($pdo)
     {
         try {
-            $sql = "INSERT INTO usuarios (nome, numero, email, senha) VALUES (:nome, :numero, :email, :senha)";
+            $sql = "INSERT INTO usuarios (nome, numero,saldo, email, senha) VALUES (:nome, :numero, :saldo, :email, :senha)";
             $prepare = $pdo->prepare($sql);
 
             $result = $prepare->execute([
                 ':nome' => $this->nome,
                 ':numero' => $this->numero,
+                ':saldo' => $this->saldo,
                 ':email' => $this->email,
                 ':senha' => $this->senha
             ]);
-            
+
             if ($result) {
                 return "Usuário cadastrado com sucesso!";
             } else {
@@ -40,16 +44,29 @@ class Usuario
             return "Erro: " . $e->getMessage();
         }
     }
-    public function listarUsuarios($pdo)
+
+    public function editarUsuario($pdo)
     {
         try {
-            $sql = "SELECT * FROM usuarios";
-            $prepare = $pdo->query($sql);
-            return $prepare->fetchAll(\PDO::FETCH_ASSOC);
-        } catch (PDOException $e) {
+            $sql = "UPDATE usuarios SET nome = :nome, numero = :numero, saldo = :saldo, email = :email, senha = :senha WHERE id = :id";
+            $prepare = $pdo->prepare($sql);
 
-            echo "Erro ao buscar usuários: " . $e->getMessage();
-            return [];
+            $result = $prepare->execute([
+                ':id' => $this->id,
+                ':nome' => $this->nome,
+                ':numero' => $this->numero,
+                ':saldo' => $this->saldo,
+                ':email' => $this->email,
+                ':senha' => $this->senha
+            ]);
+
+            if ($result) {
+                return "Usuário editado com sucesso!";
+            } else {
+                return "Erro ao editar usuário.";
+            }
+        } catch (PDOException $e) {
+            return "Erro: " . $e->getMessage();
         }
     }
 
