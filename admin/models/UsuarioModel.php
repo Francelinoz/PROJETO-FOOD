@@ -1,5 +1,4 @@
 <?php
-
 include_once '../php/db.php';
 
 class Usuario
@@ -30,11 +29,11 @@ class Usuario
             $result = $prepare->execute([
                 ':nome' => $this->nome,
                 ':numero' => $this->numero,
-                ':saldo' => $this->saldo,
+                ':saldo'=> $this->saldo,
                 ':email' => $this->email,
                 ':senha' => $this->senha
             ]);
-
+            
             if ($result) {
                 return "Usuário cadastrado com sucesso!";
             } else {
@@ -46,29 +45,29 @@ class Usuario
     }
 
     public function editarUsuario($pdo)
-    {
-        try {
-            $sql = "UPDATE usuarios SET nome = :nome, numero = :numero, saldo = :saldo, email = :email, senha = :senha WHERE id = :id";
-            $prepare = $pdo->prepare($sql);
+{
+    try {
+        $sql = "UPDATE usuarios SET nome = :nome, numero = :numero, saldo = :saldo, email = :email, senha = :senha WHERE id = :id";
+        $prepare = $pdo->prepare($sql);
 
-            $result = $prepare->execute([
-                ':id' => $this->id,
-                ':nome' => $this->nome,
-                ':numero' => $this->numero,
-                ':saldo' => $this->saldo,
-                ':email' => $this->email,
-                ':senha' => $this->senha
-            ]);
-
-            if ($result) {
-                return "Usuário editado com sucesso!";
-            } else {
-                return "Erro ao editar usuário.";
-            }
-        } catch (PDOException $e) {
-            return "Erro: " . $e->getMessage();
+        $result = $prepare->execute([  
+            ':id' => $this->id,
+            ':nome' => $this->nome,
+            ':numero' => $this->numero,
+            ':saldo' => $this->saldo,
+            ':email' => $this->email,
+            ':senha' => $this->senha
+        ]);
+        
+        if ($result) {
+            return "Usuário editado com sucesso!";
+        } else {
+            return "Erro ao editar usuário.";
         }
+    } catch (PDOException $e) {
+        return "Erro: " . $e->getMessage();
     }
+}
 
     public function excluirUsuarios($pdo)
     {
