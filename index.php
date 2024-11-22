@@ -59,7 +59,6 @@ if (!isset($_SESSION)) {
                     if (isset($_SESSION['nome'])) {
                         echo '<a href="admin/views/logout.php" class="ancora-3">Olá, ' . $_SESSION['nome'] . '</a>';
                     } else {
-                        echo '<a href="admin/login" class="ancora-3">Login</a>';
 
                         echo '<a href="admin/views/cadastro.php" class="ancora-4">cadastro</a>';
                     }
