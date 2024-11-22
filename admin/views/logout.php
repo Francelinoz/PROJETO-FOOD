@@ -12,22 +12,23 @@
         <input type="submit" value="Deslogar" name="submit">
 </body>
 
+
 <?php
 
-$usuario = new Usuario();
-$usuario = $usuarios -> listarUsuarios($pdo);
+include_once '../constrollers/UsuarioController.php';
 
-Foreach($usuario as $usuario){
+
+$usu = new UsuarioController();
+$usuarios = $usu -> listaUsuarios($pdo);
+
+foreach($usu as $usu){
     echo "<br>";
-    echo " ID: " . $usuario['id'];
-    echo "<br>";
-    echo " NOME: " . $usuario['nome'];
-    echo "<br>";
-    echo " NÚMERO: " . $usuario['numero'];
-    echo "<br>";
-    echo " EMAIL: " . $usuario['email'];
-    echo "<br>";
-    echo " SENHA: " . $usuario['senha'];
+    echo " ID: " . $usu['id'];
+    echo " NOME: " . $usu['nome'];
+    echo " NÚMERO: " . $usu['numero'];
+    echo " EMAIL: " . $usu['email'];
+    echo " SENHA: " . $usu['senha'];
+    echo "<a href='excluir-usuario?id=" . $usu['id'] . "'>  DELETE</a>";
     echo "<br>";
 }
 

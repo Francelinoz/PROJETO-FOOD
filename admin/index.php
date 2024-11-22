@@ -11,6 +11,10 @@ if (isset($_GET['url'])){
         $usu = new UsuarioController();
         $usu->editarUsuarios();
     }
+    if($_GET['url'] == 'excluir-usuario'){
+        $usu = new UsuarioController();
+        $usu->excluirUsuarios();
+    }
     if($_GET['url'] == 'y'){
         echo "página Y";
     }

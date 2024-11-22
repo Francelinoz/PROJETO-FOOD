@@ -30,7 +30,7 @@ class Usuario
                 ':email' => $this->email,
                 ':senha' => $this->senha
             ]);
-
+            
             if ($result) {
                 return "Usuário cadastrado com sucesso!";
             } else {
@@ -57,12 +57,6 @@ class Usuario
     {
         $prepare = $pdo->prepare("DELETE FROM usuarios WHERE id = ?");
         $prepare->execute([$this->id]);
-    }
-
-    public function editUsuarios()
-    {
-
-        return "Dados do usuarios";
     }
 
     public function login($pdo)
