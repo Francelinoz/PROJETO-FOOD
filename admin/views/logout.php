@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-<style>
+    <style>
     * {
         padding: 0;
         margin: 0;
@@ -92,7 +94,7 @@
         color: black;
         font-size: 20px;
         border-radius: 18px;
-        
+
     }
 
     .container {
@@ -126,6 +128,7 @@
             padding: 0 50px;
         }
     }
+
     @media (max-width: 768px) {
 
         .left {
@@ -133,15 +136,33 @@
             padding: 0 10px;
         }
     }
-</style>
-<h2>Logout</h2>
+    </style>
+    <h2>Logout</h2>
     <form action="" method="post">
         <label for="email">Deslogar</label>
         <input type="submit" value="Deslogar" name="submit">
     </form>
+    
+    <h1>Editar</h1>
+    <form action="" method="post">
+        <input type="hidden" value="Salvar" name="submit">
+
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome" value="<?php echo $usuario['nome']; ?>" required><br>
+
+        <label for="numero">Número:</label>
+        <input type="text" name="numero" id="numero" value="<?php echo $usuario['numero']; ?>" required><br>
+
+        <label for="saldo">Saldo:</label>
+        <input type="number" name="saldo" id="saldo" value="<?php echo $usuario['saldo']; ?>" required><br>
+
+        <label for="email">E-mail:</label>
+        <input type="email" name="email" id="email" value="<?php echo $usuario['email']; ?>" required><br>
+
+        <label for="senha">Senha:</label>
+        <input type="text" name="senha" id="senha" value="<?php echo $usuario['senha']; ?>" required><br>
+
+        <br><button type="submit">Salvar Alterações</button>
+    </form>
 </body>
 </html>
-
-
-
-
