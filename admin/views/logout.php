@@ -35,7 +35,7 @@
     }
 
     
-    /* FORMULARIO 1 */
+    /* FORMULARIO 1*/
     .container {
         margin: 0 0px 40px;
         transition: .6s;
@@ -259,6 +259,17 @@
         box-shadow: 0px 0px 10px 4px white;
         
     }
+    .box-sal{
+        border: 1px solid rgba(255, 255, 255, 0.486);
+        max-width: 400px;
+        float: right;
+        margin: 20px;
+        padding: 40px;
+        background: rgba(0, 0, 0, 0.657);
+        color: white;
+        border-radius: 16px;
+        
+    }
 
 
     @media (max-width: 1366px) {
@@ -286,7 +297,7 @@
     <form action="" method="post" id="form">
         <div class="container">
             <div class="icon"> </div>
-            <label for="email" id="h1">Aperte aqui para sair ?</label>
+            <label for="email" id="h1">Aperte aqui para sair da conta</label>
             <input type="submit" id="btt-1" value="Deslogar" name="submit">
             
         </div>
@@ -305,9 +316,6 @@
                 <label for="numero">Número:</label>
                 <input type="text" id="numero" name="numero" value="<?= $_GET['numero'] ?? '' ?>">
 
-                <label for="saldo">Saldo:</label>
-                <input type="number" id="saldo" name="saldo" value="<?= $_GET['saldo'] ?? '' ?>">
-
                 <label for="email">E-mail:</label>
                 <input type="email" id="email" name="email" value="<?= $_GET['email'] ?? '' ?>">
 
@@ -316,7 +324,13 @@
 
                 <button type="submit" class="centralizado">Salvar Alterações</button>
             </form>
+            
     </div>
+    <div class="box-sal">
+        <label for="saldo">Saldo:</label>
+        <input type="number" id="saldo" name="saldo" value="<?= $_GET['saldo'] ?? '' ?>">
+    </div>
+                
     
 
 </body>
