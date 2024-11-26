@@ -211,10 +211,10 @@ if (!isset($_SESSION)) {
         <section id="endereco">
             <div class="conteudo-5">
                 <div class="txt-cont-5">
-                    <h1 class="tt-cont-5">ENDEREÇO</h1>
+                    <h1 class="tt-cont-5">FEEDBACK</h1>
                     <p class="para-cont-5">Rua dos Sabores, 123 Bairro da Fome São Paulo - SP CEP: 01234-567</p>
 
-                    <form class="formulario" method="post" action="index.html">
+                    <form class="formulario" method="post" action="" name="url">
 
                         <h2 class="titulo">Contato</h2>
 

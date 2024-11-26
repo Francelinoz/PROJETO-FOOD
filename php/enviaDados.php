@@ -5,7 +5,7 @@
     //1 – Definimos Para quem vai ser enviado o email
     $para = "miguelsf806@gmail.com."; //SEU E-MAIL
     
-    //2 - resgatar o nome digitado no formulário e grava na variavel $nome
+
     $nome  = $_POST['nome'];
     $email = $_POST['email'];
     
