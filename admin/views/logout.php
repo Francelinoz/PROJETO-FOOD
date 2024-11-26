@@ -299,7 +299,6 @@
             <div class="icon"> </div>
             <label for="email" id="h1">Aperte aqui para sair da conta</label>
             <input type="submit" id="btt-1" value="Deslogar" name="submit">
-            
         </div>
     </form>
     <div class="left">
@@ -330,7 +329,6 @@
         <label for="saldo">Saldo:</label>
         <input type="number" id="saldo" name="saldo" value="<?= $_GET['saldo'] ?? '' ?>">
     </div>
-                
     
 
 </body>
