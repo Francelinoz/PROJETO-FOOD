@@ -7,7 +7,7 @@ if (isset($_GET['url'])){
         $usu = new UsuarioController();
         $usu->cadastrarUsuario($pdo);
     }
-    if($_GET['url'] == 'editar-usuario'){
+    if($_GET['url'] == 'logout'){
         $usu = new UsuarioController();
         $usu->editarUsuario($pdo);
     }

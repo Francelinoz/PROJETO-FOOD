@@ -34,7 +34,7 @@ class UsuarioController
     } else {
         echo "ID do usuário não encontrado.";
     }
-    //include_once 'views/login.php'; 
+    include_once 'views/logout.php'; 
 }
     
 public function excluirUsuarios($pdo)
