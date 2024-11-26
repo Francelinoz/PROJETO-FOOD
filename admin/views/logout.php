@@ -288,7 +288,6 @@
             <div class="icon"> </div>
             <label for="email" id="h1">Aperte aqui para sair ?</label>
             <input type="submit" id="btt-1" value="Deslogar" name="submit">
-            
         </div>
     </form>
     <div class="left">
@@ -317,8 +316,6 @@
                 <button type="submit" class="centralizado">Salvar Alterações</button>
             </form>
     </div>
-    
-
 </body>
 </html>
 
