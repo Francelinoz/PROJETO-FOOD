@@ -51,7 +51,7 @@ if (!isset($_SESSION)) {
                     <?php
 
                     if(isset($_SESSION['nome'])){
-                        echo '<a href="admin/logout" class="ancora-3">Olá, '.$_SESSION['nome'].'</a>';
+                        echo '<a href="admin/perfil" class="ancora-3">Olá, '.$_SESSION['nome'].'</a>';
                     }else{
                         echo '<a href="admin/login" class="ancora-3">Login</a>';
                         echo '<a href="admin/cadastrar-usuario" class="ancora-4">cadastro</a>';

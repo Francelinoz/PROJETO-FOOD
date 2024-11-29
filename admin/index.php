@@ -7,21 +7,13 @@ if (isset($_GET['url'])){
         $usu = new UsuarioController();
         $usu->cadastrarUsuario($pdo);
     }
-    if($_GET['url'] == 'logout'){
-        $usu = new UsuarioController();
-        $usu->editarUsuario($pdo);
-    }
-    if($_GET['url'] == 'excluir-usuario'){
-        $usu = new UsuarioController();
-        $usu->excluirUsuarios($pdo);
-    }
     if($_GET['url'] == 'login'){
         $usu = new UsuarioController();
         $usu->login($pdo);
     }
-    if($_GET['url'] == 'logout'){
+    if($_GET['url'] == 'perfil'){
         $usu = new UsuarioController();
-        $usu->logout($pdo);
+        $usu->perfil($pdo);
     }
 }else{
     header('Location: /GitHub/PROJETO-FOOD/');
