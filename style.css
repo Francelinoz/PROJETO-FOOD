@@ -61,6 +61,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+   
 
     border: 5px solid var(--cor1);
     border-image: linear-gradient(to right, var(--cor3) 5%, #fff, var(--cor3));
@@ -190,7 +191,6 @@ nav {
     background: var(--cor4);
     border-top-right-radius: 30px;
     border-bottom-left-radius: 30px;
-
     transition: .5s;
     font-weight: 600;
 
@@ -205,8 +205,7 @@ nav {
     font-weight: 600;
 
     font-size: 14px;
-    border-top-right-radius: 40px;
-    border-bottom-left-radius: 40px;
+    border-radius: 100px;
 
     box-shadow: 0px 0px 12px var(--cor1);
 
@@ -254,10 +253,10 @@ nav {
     border-top-right-radius: 30px;
     border-bottom-left-radius: 30px;
 
-    transition: .5s;
+    transition: .6s;
     font-weight: 600;
 
-    box-shadow: 0px 0px 6px var(--cor4);
+    box-shadow: 0px 0px 12px var(--cor4);
 
 }
 .ancora-4:hover {
