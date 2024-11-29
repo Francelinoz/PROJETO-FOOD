@@ -72,7 +72,7 @@ class Usuario
 
     public function excluirUsuarios($pdo)
     {
-        $sql = "DELETE FROM usuarios WHERE id = :id LIMIT 1";
+        $sql = "DELETE FROM usuarios WHERE id = :id";
         $stmt = $pdo->prepare($sql);
         $stmt->bindParam(':id', $this->id);
         $stmt->execute();

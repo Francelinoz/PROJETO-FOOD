@@ -19,5 +19,4 @@ if (isset($_GET['url'])){
     header('Location: /GitHub/PROJETO-FOOD/');
     exit;
 }
-
 ?>

@@ -20,7 +20,10 @@ class UsuarioController
         }
 
         include_once 'views/cadastro.php';
+        
     }
+
+
 
     public function login($pdo)
     {
@@ -28,8 +31,10 @@ class UsuarioController
         if (isset($_POST['submit'])) {
             $email = $_POST['email'];
             $senha = $_POST['senha'];
-            $usuarioModel = new Usuario(null, null, null, $email, $senha,null);
+            $usuarioModel = new Usuario(null, null,null, $email, $senha);
             $usuario = $usuarioModel->login($pdo);
+
+
             if ($usuario) {
                 session_start();
                 $_SESSION['user_id'] = $usuario['id'];
@@ -44,7 +49,7 @@ class UsuarioController
             }
         }
         include_once 'views/login.php';
-    }
+    }    
 
     public function perfil($pdo)
     {
@@ -53,7 +58,7 @@ class UsuarioController
         $dados = $usu->getId($pdo);
         extract($dados);
 
-        if (isset($_POST['logout'])) {
+        if (isset($_POST['logout'])){
             session_start();
             session_destroy();
             header('Location: /GitHub/PROJETO-FOOD/');
@@ -61,29 +66,21 @@ class UsuarioController
 
         if (isset($_POST['salvar'])) {
             session_start();
-            $usuario = new Usuario(
-                $_POST['nome'],
-                $_POST['telefone'],
-                $_POST['saldo'],
-                $_POST['email'],
-                $_POST['senha'],
-                $_POST['id']
-            );
-            $_SESSION['nome'] = $_POST['nome'];
+            $usuario = new Usuario($_POST['nome'], $_POST['telefone'], $_POST['saldo'],
+             $_POST['email'], $_POST['senha'], $_POST['id']);
+             $_SESSION['nome'] = $_POST['nome'];
             echo $usuario->editarUsuario($pdo);
-
+            
             header('Location: /GitHub/PROJETO-FOOD/');
             exit;
-        }
+        } 
 
         if (isset($_POST['excluir'])) {
-            $usu = new Usuario('', '', '', '', '', $_POST['id']);
-            $usu->excluirUsuarios($pdo);
-            session_start();
-            session_destroy();
-            header('Location: /GitHub/PROJETO-FOOD/');
+            $usu = new Usuario('', '', '', '', '', $_POST['id']); 
+            $usu->excluirUsuarios($pdo); 
+            header("Location: /GitHub/PROJETO-FOOD/");
             exit;
-        }
+        } 
         include_once 'views/perfil.php';
     }
 }
