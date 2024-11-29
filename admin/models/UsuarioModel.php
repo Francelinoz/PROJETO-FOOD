@@ -10,7 +10,8 @@ class Usuario
     private $email;
     private $senha;
 
-    public function __construct($nome = null, $telefone = null, $saldo = null, $email = null, $senha = null, $id = null)
+    public function __construct($nome = null, $telefone = null, $saldo = null, $email = null,
+     $senha = null, $id = null)
     {
         $this->nome = $nome;
         $this->telefone = $telefone;
@@ -71,8 +72,12 @@ class Usuario
 
     public function excluirUsuarios($pdo)
     {
-        $prepare = $pdo->prepare("DELETE FROM usuarios WHERE id = ?");
-        $prepare->execute([$this->id]);
+        $sql = "DELETE FROM usuarios WHERE id = :id LIMIT 1";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(':id', $this->id);
+        $stmt->execute();
+
+        return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
     public function login($pdo)
@@ -81,6 +86,16 @@ class Usuario
         $stmt = $pdo->prepare($sql);
         $stmt->bindParam(':email', $this->email);
         $stmt->bindParam(':senha', $this->senha);
+        $stmt->execute();
+
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    public function getId($pdo)
+    {
+        $sql = "SELECT * FROM usuarios WHERE id = :id LIMIT 1";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(':id', $this->id);
         $stmt->execute();
 
         return $stmt->fetch(PDO::FETCH_ASSOC);

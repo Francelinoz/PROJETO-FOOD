@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Edição</title>
 </head>
 <body>
 <style>
@@ -298,7 +298,7 @@
         <div class="container">
             <div class="icon"> </div>
             <label for="email" id="h1">Aperte aqui para sair da conta</label>
-            <input type="submit" id="btt-1" value="Deslogar" name="submit">
+            <input type="submit" id="btt-1" value="Deslogar" name="logout">
         </div>
     </form>
     <div class="left">
@@ -306,30 +306,30 @@
             <div class="icon-2"></div>
             <h1>Editar Usuário</h1>
         </div>
-            <form action="UsuarioModel.php" method="get" id="form-2">
-                <input type="hidden" name="id" value="<?= $_GET['id'] ?? '' ?>">
+            <form action="" method="post" id="form-2">
+                <input type="hidden" name="id" value="<?= $id ?>">
 
                 <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" value="<?= $_GET['nome'] ?? '' ?>">
+                <input type="text" id="nome" name="nome" value="<?= $nome ?>">
 
                 <label for="numero">Número:</label>
-                <input type="text" id="numero" name="numero" value="<?= $_GET['numero'] ?? '' ?>">
+                <input type="text" id="numero" name="telefone" value="<?= $telefone ?>">
 
                 <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" value="<?= $_GET['email'] ?? '' ?>">
+                <input type="email" id="email" name="email" value="<?= $email ?>">
 
                 <label for="senha">Senha:</label>
-                <input type="password" id="senha" name="senha" value="<?= $_GET['senha'] ?? '' ?>">
+                <input type="password" id="senha" name="senha" value="<?= $senha ?>">
 
-                <button type="submit" class="centralizado">Salvar Alterações</button>
-            </form>
-            
+                <input type="submit" class="centralizado" name="salvar" value="Salvar Usuário">
+                <input type="submit" class="centralizado" name="excluir" value="Excluir Usuário">        
     </div>
     <div class="box-sal">
         <label for="saldo">Saldo:</label>
-        <input type="number" id="saldo" name="saldo" value="<?= $_GET['saldo'] ?? '' ?>">
+        <input type="number" id="saldo" name="saldo" value="<?= $saldo ?>">
     </div>
     
+</form>
 
 </body>
 </html>
