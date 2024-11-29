@@ -632,10 +632,14 @@ nav {
     position: relative;
 
     overflow: hidden;
+    width: 400px;
+    height: 400px;
 }
 
 .cardapio-container swiper-wrapper {
     background: var(--cor1);
+    width: 400px;
+    height: 400px;
 }
 
 .cardapio-container {
@@ -645,15 +649,23 @@ nav {
 .slide swiper-slide {
     padding: 40px 60px;
     cursor: grab;
+    width: 400px;
+    height: 400px;
+}
+.slide swiper-slide swiper-slide-prev{
+    width: 400px;
+    height: 400px;
 }
 
 .slide swiper-slide:active {
     cursor: grabbing;
+    width: 400px;
+    height: 400px;
 }
 
 .slide img {
-    width: 100%;
-    height: 1200px;
+    width: 400px;
+    height: 600px;
     margin-top: 800px;
     margin: auto;
 
