@@ -153,7 +153,7 @@ if (!isset($_SESSION)) {
                     <p class="desc-burguer">Um hambúrguer com várias camadas de carne,
                         queijo e coberturas, empilhadas tão alto quanto a lendária torre.</p>
                     <p class="desc-burguer-bolder">R$ 35,00</p>
-                    <p class="desc-burguer-2">COMPRAR</p>
+                    <a href="comprar.php" class="desc-burguer-2">COMPRAR</a>
                 </div>
 
                 <div class="slide swiper-slide" style="text-align: center">
@@ -162,7 +162,7 @@ if (!isset($_SESSION)) {
                     <p class="desc-burguer">Um hambúrguer picante que fará seu paladar explodir como
                         uma bomba atômica.</p>
                     <p class="desc-burguer-bolder">R$ 28,00</p>
-                    <p class="desc-burguer-2">COMPRAR</p>
+                    <a href="comprar.php" class="desc-burguer-2">COMPRAR</a>
                 </div>
 
                 <div class="slide swiper-slide" style="text-align: center">
@@ -171,7 +171,7 @@ if (!isset($_SESSION)) {
                     <p class="desc-burguer">Um hambúrguer tão escuro e misterioso quanto um
                         buraco negro, com uma mistura secreta de especiarias e molhos.</p>
                     <p class="desc-burguer-bolder">R$ 40,00</p>
-                    <p class="desc-burguer-2">COMPRAR</p>
+                    <a href="comprar.php" class="desc-burguer-2">COMPRAR</a>
                 </div>
 
                 <div class="slide swiper-slide" style="text-align: center"> 
@@ -180,7 +180,7 @@ if (!isset($_SESSION)) {
                     <p class="desc-burguer">Um hambúrguer mágico e colorido, coberto com
                         ingredientes únicos e extravagantes.</p>
                     <p class="desc-burguer-bolder">R$ 22,00</p>
-                    <p class="desc-burguer-2">COMPRAR</p>
+                    <a href="comprar.php" class="desc-burguer-2">COMPRAR</a>
                 </div>
 
                 <div class="slide swiper-slide" style="text-align: center">
@@ -189,7 +189,7 @@ if (!isset($_SESSION)) {
                     <p class="desc-burguer">Um hambúrguer assustadoramente delicioso, servido em um
                         pão preto com olhos de queijo e uma boca de ketchup.</p>
                     <p class="desc-burguer-bolder">R$ 36,00</p>
-                    <p class="desc-burguer-2">COMPRAR</p>
+                    <a href="comprar.php" class="desc-burguer-2">COMPRAR</a>
                 </div>
 
                 <div class="slide swiper-slide" style="text-align: center">
@@ -198,7 +198,7 @@ if (!isset($_SESSION)) {
                     <p class="desc-burguer">O hambúrguer mais delicioso e supremo do universo,
                         feito com os melhores ingredientes e preparado com maestria divina.</p>
                     <p class="desc-burguer-bolder">R$ 45,00</p>
-                    <p class="desc-burguer-2">COMPRAR</p>
+                    <a href="comprar.php" class="desc-burguer-2">COMPRAR</a>
                 </div>
 
             </div>

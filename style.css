@@ -221,7 +221,6 @@ nav {
     background: var(--cor4);
     border-top-right-radius: 30px;
     border-bottom-left-radius: 30px;
-
     transition: .5s;
     font-weight: 600;
 
@@ -231,18 +230,19 @@ nav {
 
 .ancora-3:hover {
     background: var(--cor1);
-    color: var(--cor4);
+    color: var(--cor2);
 
     font-weight: 600;
 
-    font-size: 11px;
+    font-size: 14px;
     border-radius: 100px;
+    text-shadow: 0px 0px 6px var(--cor1);
 
-    box-shadow: 0px 0px 12px var(--cor4);
+    box-shadow: 0px 0px 20px var(--cor1);
 
 
 }
-.ancora-4{
+.ancora-4 {
     margin-left: 60px;
     padding: 15px;
     text-decoration: none;
@@ -252,23 +252,23 @@ nav {
     background: var(--cor4);
     border-top-right-radius: 30px;
     border-bottom-left-radius: 30px;
-
-    transition: .6s;
+    transition: .5s;
     font-weight: 600;
 
-    box-shadow: 0px 0px 12px var(--cor4);
+    box-shadow: 0px 0px 6px var(--cor4);
 
 }
+
 .ancora-4:hover {
     background: var(--cor1);
-    color: var(--cor4);
+    color: var(--cor2);
 
     font-weight: 600;
 
-    font-size: 11px;
+    font-size: 14px;
     border-radius: 100px;
-
-    box-shadow: 0px 0px 12px var(--cor4);
+    text-shadow: 0px 0px 6px var(--cor1);
+    box-shadow: 0px 0px 20px var(--cor1);
 
 
 }
@@ -704,6 +704,8 @@ nav {
     padding: 16px;
     text-align: center;
     margin: auto;
+    margin-top: 10px;
+    text-decoration: none;
     width: 200px;
     font-weight: 500;
     box-shadow: 0px 0px 8px 2px rgba(255, 255, 255, 0.349);
