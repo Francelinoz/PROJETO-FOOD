@@ -7,88 +7,84 @@
     <title>Pedido</title>
 </head>
 <style>
-    body {
-        background-image: linear-gradient(#E68023 40%, white);
-        background-repeat: no-repeat;
-        margin: 0;
-        font-family: sans-serif;
+body {
+    background-image: linear-gradient(#E68023 40%, white);
+    background-repeat: no-repeat;
+    margin: 0;
+    font-family: sans-serif;
 
-    }
+}
 
-    .menu {
-        background-color: black;
-        padding: 30px;
-        text-align: center;
+.menu {
+    background-color: black;
+    padding: 30px;
+    text-align: center;
 
-    }
+}
 
-    .ancora {
-        color: aliceblue;
-        text-decoration: none;
-        font-weight: 200;
-        margin: 20px;
-        font-size: 18px;
-    }
+.ancora {
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 200;
+    margin: 20px;
+    font-size: 18px;
+}
 
-    .box {
-        background-color: rgba(0, 0, 0, 0.400);
-        color: aliceblue;
-        margin: 20px;
-        padding: 40px;
-        border-radius: 16px;
-        transition: .4s;
-    }
+.box {
+    background-color: rgba(0, 0, 0, 0.400);
+    color: aliceblue;
+    margin: 20px;
+    padding: 40px;
+    border-radius: 16px;
+    transition: .4s;
+}
 
-    .box:hover {
-        background-color: rgba(0, 0, 0, 0.600);
+.box:hover {
+    background-color: rgba(0, 0, 0, 0.600);
 
-    }
+}
 
-    .box2 {
-        background-color: white;
-        color: aliceblue;
-        margin: 40px;
-        width: 400px;
+.box2 {
+    background-color: white;
+    color: aliceblue;
+    margin: 40px;
+    width: 400px;
 
-        padding: 40px;
-        border-radius: 16px;
-        transition: .4s;
-        box-shadow: 0px 0px 16px #E68023;
-    }
+    padding: 40px;
+    border-radius: 16px;
+    transition: .4s;
+    box-shadow: 0px 0px 16px #E68023;
+}
 
+#text {
+    font-size: 26px;
+}
 
-    .label {
+.centralizado {
+    background: rgba(0, 0, 0, 0.600);
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.400);
+}
 
-    #text{
-        font-size: 26px;
-    }
+.centralizado:hover {
+    cursor: pointer;
+}
 
-    .centralizado {
-        background: rgba(0, 0, 0, 0.600);
-        color: white;
-        padding: 10px;
-        border-radius: 6px;
-        border: 1px solid rgba(255, 255, 255, 0.400);
-    }
+.centralizado2 {
+    background: #E68023;
+    color: white;
+    width: 100%;
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.400)
+}
 
-    .centralizado:hover {
-        cursor: pointer;
-    }
- 
-    .centralizado2 {
-        background: #E68023;
-        color: white;
-        width: 100%;
-        padding: 20px;
-        border-radius: 16px;
-        border: 1px solid rgba(255, 255, 255, 0.400)
-    }
-
-    .centralizado2:hover {
-        background: #A84000;
-        cursor: pointer;
-        box-shadow: 0px 0px 16px #E68023;
-    }
+.centralizado2:hover {
+    background: #A84000;
+    cursor: pointer;
+    box-shadow: 0px 0px 16px #E68023;
 }
 </style>
 
@@ -109,7 +105,7 @@
             <input type="hidden" name="id">
             <div class="container">
                 <div class="box">
-                    <label for="Lanche"id="text">Lanche:</label>
+                    <label for="Lanche" id="text">Lanche:</label>
                     <label for="Lanche" id="text">The Tower of Babel Burger</label><br>
 
                     <label for="valor" id="text">Valor:</label>
