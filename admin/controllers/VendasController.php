@@ -7,6 +7,6 @@ class LancheController
 
     public function __construct()
     {
-        $this->obj = new Lanche();
+        $this->obj = new Vendas();
     }
 }
