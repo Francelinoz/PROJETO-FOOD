@@ -56,6 +56,9 @@
         box-shadow: 0px 0px 16px #E68023;
     }
 
+
+    .label {
+
     #text{
         font-size: 26px;
     }
@@ -86,6 +89,7 @@
         cursor: pointer;
         box-shadow: 0px 0px 16px #E68023;
     }
+}
 </style>
 
 <body>
@@ -119,6 +123,9 @@
 
                 <div class="box">
 
+
+                    <label for="Lanche">Lanche:</label>
+                    <label for="Lanche">The Atomic Burger</label><br>
 
                     <label for="Lanche" id="text">Lanche:</label>
                     <label for="Lanche" id="text">The Atomic Burger</label><br>
