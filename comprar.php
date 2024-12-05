@@ -56,7 +56,10 @@
         box-shadow: 0px 0px 16px #E68023;
     }
 
+
     .label {
+        
+    #text{
         font-size: 26px;
     }
 
@@ -86,6 +89,7 @@
         cursor: pointer;
         box-shadow: 0px 0px 16px #E68023;
     }
+}
 </style>
 
 <body>
@@ -105,13 +109,13 @@
             <input type="hidden" name="id">
             <div class="container">
                 <div class="box">
-                    <label for="Lanche">Lanche:</label>
-                    <label for="Lanche">The Tower of Babel Burger</label><br>
+                    <label for="Lanche"id="text">Lanche:</label>
+                    <label for="Lanche" id="text">The Tower of Babel Burger</label><br>
 
-                    <label for="valor">Valor:</label>
-                    <label for="valor">R$35</label><br>
+                    <label for="valor" id="text">Valor:</label>
+                    <label for="valor" id="text">R$35</label><br>
 
-                    <label for="Quantidade">Quantidade:</label>
+                    <label for="Quantidade" id="text">Quantidade:</label>
                     <input type="number" id="Quantidade" name="Quantidade">
 
                     <input type="submit" class="centralizado" name="adicionar" value="Adicionar"><br><br>
@@ -119,14 +123,20 @@
 
                 <div class="box">
 
+<<<<<<< HEAD
 
                     <label for="Lanche">Lanche:</label>
                     <label for="Lanche">The Atomic Burger</label><br>
+=======
+>>>>>>> f99870e34c1a4247cb215a9158086bd8ec449514
 
-                    <label for="valor">Valor:</label>
-                    <label for="valor">R$28</label><br>
+                    <label for="Lanche" id="text">Lanche:</label>
+                    <label for="Lanche" id="text">The Atomic Burger</label><br>
 
-                    <label for="Quantidade">Quantidade:</label>
+                    <label for="valor" id="text">Valor:</label>
+                    <label for="valor" id="text">R$28</label><br>
+
+                    <label for="Quantidade" id="text">Quantidade:</label>
                     <input type="number" id="Quantidade" name="Quantidade">
 
                     <input type="submit" class="centralizado" name="adicionar" value="Adicionar"><br><br>
@@ -135,13 +145,13 @@
 
                 <div class="box">
 
-                    <label for="Lanche">Lanche:</label>
-                    <label for="Lanche">The Black Hole Burger</label><br>
+                    <label for="Lanche" id="text">Lanche:</label>
+                    <label for="Lanche" id="text">The Black Hole Burger</label><br>
 
-                    <label for="valor">Valor:</label>
-                    <label for="valor">R$40</label><br>
+                    <label for="valor" id="text">Valor:</label>
+                    <label for="valor" id="text">R$40</label><br>
 
-                    <label for="Quantidade">Quantidade:</label>
+                    <label for="Quantidade" id="text">Quantidade:</label>
                     <input type="number" id="Quantidade" name="Quantidade">
 
                     <input type="submit" class="centralizado" name="adicionar" value="Adicionar"><br><br>
@@ -149,13 +159,13 @@
 
                 <div class="box">
 
-                    <label for="Lanche">Lanche:</label>
-                    <label for="Lanche">The Unicorn Burger</label><br>
+                    <label for="Lanche" id="text">Lanche:</label>
+                    <label for="Lanche" id="text">The Unicorn Burger</label><br>
 
-                    <label for="valor">Valor:</label>
-                    <label for="valor">R$22</label><br>
+                    <label for="valor" id="text">Valor:</label>
+                    <label for="valor" id="text">R$22</label><br>
 
-                    <label for="Quantidade">Quantidade:</label>
+                    <label for="Quantidade" id="text">Quantidade:</label>
                     <input type="number" id="Quantidade" name="Quantidade">
 
                     <input type="submit" class="centralizado" name="adicionar" value="Adicionar"><br><br>
@@ -163,13 +173,13 @@
 
                 <div class="box">
 
-                    <label for="Lanche">Lanche:</label>
-                    <label for="Lanche">The Zombie Burger</label><br>
+                    <label for="Lanche" id="text">Lanche:</label>
+                    <label for="Lanche" id="text">The Zombie Burger</label><br>
 
-                    <label for="valor">Valor:</label>
-                    <label for="valor">R$36</label><br>
+                    <label for="valor" id="text">Valor:</label>
+                    <label for="valor" id="text">R$36</label><br>
 
-                    <label for="Quantidade">Quantidade:</label>
+                    <label for="Quantidade" id="text">Quantidade:</label>
                     <input type="number" id="Quantidade" name="Quantidade">
 
                     <input type="submit" class="centralizado" name="adicionar" value="Adicionar"><br><br>
@@ -178,13 +188,13 @@
 
                 <div class="box">
 
-                    <label for="Lanche">Lanche:</label>
-                    <label for="Lanche">The Godlike Burger</label><br>
+                    <label for="Lanche" id="text">Lanche:</label>
+                    <label for="Lanche" id="text">The Godlike Burger</label><br>
 
-                    <label for="valor">Valor:</label>
-                    <label for="valor">R$45</label><br>
+                    <label for="valor" id="text">Valor:</label>
+                    <label for="valor" id="text">R$45</label><br>
 
-                    <label for="Quantidade">Quantidade:</label>
+                    <label for="Quantidade" id="text">Quantidade:</label>
                     <input type="number" id="Quantidade" name="Quantidade">
 
                     <input type="submit" class="centralizado" name="adicionar" value="Adicionar"><br><br>
