@@ -58,7 +58,7 @@
 
 
     .label {
-        
+
     #text{
         font-size: 26px;
     }
@@ -123,12 +123,9 @@
 
                 <div class="box">
 
-<<<<<<< HEAD
 
                     <label for="Lanche">Lanche:</label>
                     <label for="Lanche">The Atomic Burger</label><br>
-=======
->>>>>>> f99870e34c1a4247cb215a9158086bd8ec449514
 
                     <label for="Lanche" id="text">Lanche:</label>
                     <label for="Lanche" id="text">The Atomic Burger</label><br>
