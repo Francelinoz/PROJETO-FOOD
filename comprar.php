@@ -71,7 +71,7 @@
     .centralizado:hover {
         cursor: pointer;
     }
-
+ 
     .centralizado2 {
         background: #E68023;
         color: white;
